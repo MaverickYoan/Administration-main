@@ -6,11 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="8717910.gif" type="image/x-icon">
+    <link rel="javaScript" href="script.js">
 
     <title>Administration France - Portail</title>
 </head>
 
-<body>
+<body id="content">
+    <nav class="navbar">
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#civil">État Civil & Identité</a></li>
+            <li><a href="#emploi">Emploi & Formation</a></li>
+            <li><a href="#social">Santé & Social</a></li>
+            <li><a href="#impôts">Impôts & Finances</a></li>
+            <li><a href="#logement">Logement & Urbanisme</a></li>
+            <li><a href="#justice">Justice & Sécurité</a></li>
+            <li><a href="#education">Éducation & Culture</a></li>
+            <li><a href="#entreprises">Entreprises & Commerce</a></li>
+            <li><a href="#quick">Quick-List</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="header">
             <h1>🏛️ Administration France <img src="pentacle__.jpg" width="40px" alt="image d'un pentacle"></h1>
@@ -35,7 +55,7 @@
             <div class="category-card" data-category="identite">
                 <div class="category-header">
                     <div class="category-icon">🆔</div>
-                    <div class="category-title">État Civil & Identité</div>
+                    <div id="civil" class="category-title">État Civil & Identité</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.service-public.fr" target="_blank">Service-Public.fr - Démarches
@@ -51,7 +71,7 @@
             <div class="category-card" data-category="emploi">
                 <div class="category-header">
                     <div class="category-icon">💼</div>
-                    <div class="category-title">Emploi & Formation</div>
+                    <div id="emploi" class="category-title">Emploi & Formation</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.pole-emploi.fr" target="_blank">Pôle Emploi</a></li>
@@ -65,7 +85,7 @@
             <div class="category-card" data-category="social">
                 <div class="category-header">
                     <div class="category-icon">🏥</div>
-                    <div class="category-title">Santé & Social</div>
+                    <div id="social" class="category-title">Santé & Social</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.ameli.fr" target="_blank">Ameli - Assurance Maladie</a></li>
@@ -81,7 +101,7 @@
             <div class="category-card" data-category="impots">
                 <div class="category-header">
                     <div class="category-icon">💰</div>
-                    <div class="category-title">Impôts & Finances</div>
+                    <div id="impôts" class="category-title">Impôts & Finances</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.impots.gouv.fr" target="_blank">Impots.gouv.fr</a></li>
@@ -95,7 +115,7 @@
             <div class="category-card" data-category="logement">
                 <div class="category-header">
                     <div class="category-icon">🏠</div>
-                    <div class="category-title">Logement & Urbanisme</div>
+                    <div id="logement" class="category-title">Logement & Urbanisme</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.action-logement.fr" target="_blank">Action Logement</a></li>
@@ -110,7 +130,7 @@
             <div class="category-card" data-category="justice">
                 <div class="category-header">
                     <div class="category-icon">⚖️</div>
-                    <div class="category-title">Justice & Sécurité</div>
+                    <div id="justice" class="category-title">Justice & Sécurité</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.justice.gouv.fr" target="_blank">Ministère de la Justice</a></li>
@@ -125,7 +145,7 @@
             <div class="category-card" data-category="education">
                 <div class="category-header">
                     <div class="category-icon">🎓</div>
-                    <div class="category-title">Éducation & Culture</div>
+                    <div id="education" class="category-title">Éducation & Culture</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.education.gouv.fr" target="_blank">Éducation Nationale</a></li>
@@ -139,7 +159,7 @@
             <div class="category-card" data-category="entreprise">
                 <div class="category-header">
                     <div class="category-icon">🏢</div>
-                    <div class="category-title">Entreprises & Commerce</div>
+                    <div id="entreprises" class="category-title">Entreprises & Commerce</div>
                 </div>
                 <ul class="sites-list">
                     <li><a href="https://www.infogreffe.fr" target="_blank">Infogreffe</a></li>
@@ -151,7 +171,7 @@
             </div>
         </div>
 
-        <div class="quick-links">
+        <div id="quick" class="quick-links">
             <h3>🚀 Liens Rapides</h3>
             <div class="quick-buttons">
                 <a href="https://www.service-public.fr" target="_blank" class="quick-btn">Service Public</a>
@@ -281,6 +301,26 @@
             });
         });
     </script>
+<!-- * fond d'écran -->
+<div class="sky">
+    <img src="img/tHi.gif" alt="Image d'un oiseau qui vole">
+    <img id="thirdBird" src="img/tHi.gif" alt="Image troisième oiseau qui vole">
+    <img id="secondBird" src="img/05cd33059a006bf49006097af4ccba98-plane-in-flight.webp"
+        alt="Image secondZ oiseau qui vole">
+</div>
+
+<!-- * Section - Script burger -->
+<script src="script.js"></script>
+
+<!-- back-to-top section -------------->
+<a href="#content" class="back-to-top">
+    <span>top</span>
+    <!-- aria-hidden="true" opur masquer l'icon de l'écran -->
+    <svg width="10" height="10" viewbox=" 0 0 24 24" aria-hidden="true">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+    </svg>
+
 </body>
 
 </html>
