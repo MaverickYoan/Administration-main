@@ -450,7 +450,7 @@ body {
     .hallucination-effect {
       position: relative;
       overflow: hidden;
-      background-color: magenta;
+      background-color: rgb(21, 255, 0);
       background-blend-mode: screen;
     }
     .hallucination-effect:before, .hallucination-effect:after {
