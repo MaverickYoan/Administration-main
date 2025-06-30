@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2d5016 0%, #1a1a1a 50%, #0f3f0f 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.search-container {
+    background: white;
+    border-radius: 50px;
+    padding: 15px 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.search-container:hover {
+    transform: translateY(-2px);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.search-btn {
+    background: linear-gradient(45deg, #2d5016, #1b4b1b);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: linear-gradient(45deg, #3a6b1e, #247924);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category-icon {
+    font-size: 2.5em;
+    margin-right: 15px;
+}
+
+.category-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.sites-list {
+    list-style: none;
+}
+
+.sites-list li {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.sites-list li:hover {
+    background: #e8f5e8;
+}
+
+.sites-list a {
+    text-decoration: none;
+    color: #2d5016;
+    font-weight: 500;
+    display: block;
+}
+
+.sites-list a:hover {
+    color: #1b4b1b;
+}
+
+.quick-links {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links h3 {
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    font-size: 1.5em;
+}
+
+.quick-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quick-btn {
+    background: linear-gradient(45deg, #2d5016, #1a1a1a, #0f3f0f);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(45, 80, 22, 0.3);
+}
+
+.quick-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(45, 80, 22, 0.4);
+    background: linear-gradient(45deg, #3a6b1e, #2d2d2d, #247924);
+}
+
+.filtered-results {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.no-results {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.portail-text {
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.portail-sous-text {
+    font-size: large;
+    font-weight: bolder;
+    color: #00ff00;
+}
+
+.portail-sous-text:hover {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #00ff00;
+}
+
+.img,
+.vid {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid green;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-buttons {
+        justify-content: stretch;
+    }
+
+    .quick-btn {
+        flex: 1;
+        text-align: center;
+    }
+}

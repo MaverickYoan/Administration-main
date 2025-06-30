@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="8717910.gif" type="image/x-icon">
+
+    <title>Administration France - Portail</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ Administration France <img src="pentacle__.jpg" width="40px" alt="image d'un pentacle"></h1>
+            <p class="portail-text">Votre portail unique vers tous les services publics français</p>
+            <hr>
+            <p class="portail-sous-text">Vous peinez avec tous les sites administratifs français. <br>
+                une page web qui les regroupe tous.</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input"
+                placeholder="Rechercher un service, une démarche ou une administration..." id="searchInput">
+            <button class="search-btn" onclick="searchSites()">🔍 Rechercher</button>
+        </div>
+
+        <div class="filtered-results" id="searchResults">
+            <h3>Résultats de recherche :</h3>
+            <div id="resultsContent"></div>
+        </div>
+
+        <div class="categories-grid" id="categoriesGrid">
+            <div class="category-card" data-category="identite">
+                <div class="category-header">
+                    <div class="category-icon">🆔</div>
+                    <div class="category-title">État Civil & Identité</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.service-public.fr" target="_blank">Service-Public.fr - Démarches
+                            officielles</a></li>
+                    <li><a href="https://passeport.ants.gouv.fr" target="_blank">ANTS - Passeport</a></li>
+                    <li><a href="https://permisdeconduire.ants.gouv.fr" target="_blank">ANTS - Permis de conduire</a>
+                    </li>
+                    <li><a href="https://immatriculation.ants.gouv.fr" target="_blank">ANTS - Carte grise</a></li>
+                    <li><a href="https://www.diplomatie.gouv.fr" target="_blank">France Diplomatie</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="emploi">
+                <div class="category-header">
+                    <div class="category-icon">💼</div>
+                    <div class="category-title">Emploi & Formation</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.pole-emploi.fr" target="_blank">Pôle Emploi</a></li>
+                    <li><a href="https://www.moncompteformation.gouv.fr" target="_blank">Mon Compte Formation</a></li>
+                    <li><a href="https://www.alternance.emploi.gouv.fr" target="_blank">Portail de l'Alternance</a></li>
+                    <li><a href="https://www.service-civique.gouv.fr" target="_blank">Service Civique</a></li>
+                    <li><a href="https://www.1jeune1solution.gouv.fr" target="_blank">1 Jeune 1 Solution</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="social">
+                <div class="category-header">
+                    <div class="category-icon">🏥</div>
+                    <div class="category-title">Santé & Social</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.ameli.fr" target="_blank">Ameli - Assurance Maladie</a></li>
+                    <li><a href="https://www.caf.fr" target="_blank">CAF - Allocations Familiales</a></li>
+                    <li><a href="https://www.msa.fr" target="_blank">MSA - Mutualité Sociale Agricole</a></li>
+                    <li><a href="https://www.complementaire-sante-solidaire.gouv.fr" target="_blank">Complémentaire
+                            Santé Solidaire</a></li>
+                    <li><a href="https://www.pour-les-personnes-agees.gouv.fr" target="_blank">Pour les Personnes
+                            Âgées</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="impots">
+                <div class="category-header">
+                    <div class="category-icon">💰</div>
+                    <div class="category-title">Impôts & Finances</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.impots.gouv.fr" target="_blank">Impots.gouv.fr</a></li>
+                    <li><a href="https://www.economie.gouv.fr" target="_blank">Ministère de l'Économie</a></li>
+                    <li><a href="https://www.douane.gouv.fr" target="_blank">Douanes</a></li>
+                    <li><a href="https://www.banque-france.fr" target="_blank">Banque de France</a></li>
+                    <li><a href="https://www.tresor.economie.gouv.fr" target="_blank">Trésor Public</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="logement">
+                <div class="category-header">
+                    <div class="category-icon">🏠</div>
+                    <div class="category-title">Logement & Urbanisme</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.action-logement.fr" target="_blank">Action Logement</a></li>
+                    <li><a href="https://www.anil.org" target="_blank">ANIL - Information Logement</a></li>
+                    <li><a href="https://www.cohesion-territoires.gouv.fr" target="_blank">Cohésion des Territoires</a>
+                    </li>
+                    <li><a href="https://www.cadastre.gouv.fr" target="_blank">Cadastre</a></li>
+                    <li><a href="https://www.geoportail.gouv.fr" target="_blank">Géoportail</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="justice">
+                <div class="category-header">
+                    <div class="category-icon">⚖️</div>
+                    <div class="category-title">Justice & Sécurité</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.justice.gouv.fr" target="_blank">Ministère de la Justice</a></li>
+                    <li><a href="https://www.service-public.fr/particuliers/vosdroits" target="_blank">Vos Droits et
+                            Démarches</a></li>
+                    <li><a href="https://www.interieur.gouv.fr" target="_blank">Ministère de l'Intérieur</a></li>
+                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Légifrance</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="education">
+                <div class="category-header">
+                    <div class="category-icon">🎓</div>
+                    <div class="category-title">Éducation & Culture</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.education.gouv.fr" target="_blank">Éducation Nationale</a></li>
+                    <li><a href="https://www.parcoursup.fr" target="_blank">Parcoursup</a></li>
+                    <li><a href="https://www.etudiant.gouv.fr" target="_blank">Étudiant.gouv.fr</a></li>
+                    <li><a href="https://www.culture.gouv.fr" target="_blank">Ministère de la Culture</a></li>
+                    <li><a href="https://www.cnous.fr" target="_blank">CNOUS - Bourses étudiantes</a></li>
+                </ul>
+            </div>
+
+            <div class="category-card" data-category="entreprise">
+                <div class="category-header">
+                    <div class="category-icon">🏢</div>
+                    <div class="category-title">Entreprises & Commerce</div>
+                </div>
+                <ul class="sites-list">
+                    <li><a href="https://www.infogreffe.fr" target="_blank">Infogreffe</a></li>
+                    <li><a href="https://www.guichet-entreprises.fr" target="_blank">Guichet Entreprises</a></li>
+                    <li><a href="https://www.bpifrance.fr" target="_blank">Bpifrance</a></li>
+                    <li><a href="https://www.economie.gouv.fr/entreprises" target="_blank">Entreprises.gouv.fr</a></li>
+                    <li><a href="https://www.urssaf.fr" target="_blank">URSSAF</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <h3>🚀 Liens Rapides</h3>
+            <div class="quick-buttons">
+                <a href="https://www.service-public.fr" target="_blank" class="quick-btn">Service Public</a>
+                <a href="https://www.france.fr" target="_blank" class="quick-btn">France.fr</a>
+                <a href="https://www.gouvernement.fr" target="_blank" class="quick-btn">Gouvernement</a>
+                <a href="https://www.data.gouv.fr" target="_blank" class="quick-btn">Open Data</a>
+                <a href="https://www.vie-publique.fr" target="_blank" class="quick-btn">Vie Publique</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Base de données des sites avec mots-clés pour la recherche
+        const sitesDatabase = {
+            "Service-Public.fr": {
+                url: "https://www.service-public.fr",
+                category: "État Civil & Identité",
+                keywords: ["démarche", "officiel", "administration", "formulaire", "état civil"]
+            },
+            "ANTS - Passeport": {
+                url: "https://passeport.ants.gouv.fr",
+                category: "État Civil & Identité",
+                keywords: ["passeport", "voyage", "identité", "document"]
+            },
+            "Pôle Emploi": {
+                url: "https://www.pole-emploi.fr",
+                category: "Emploi & Formation",
+                keywords: ["emploi", "chômage", "travail", "formation", "allocation"]
+            },
+            "Ameli": {
+                url: "https://www.ameli.fr",
+                category: "Santé & Social",
+                keywords: ["santé", "sécurité sociale", "remboursement", "médecin", "assurance maladie"]
+            },
+            "Impots.gouv.fr": {
+                url: "https://www.impots.gouv.fr",
+                category: "Impôts & Finances",
+                keywords: ["impôt", "déclaration", "taxe", "revenu", "fisc"]
+            },
+            "CAF": {
+                url: "https://www.caf.fr",
+                category: "Santé & Social",
+                keywords: ["allocation", "famille", "aide", "logement", "enfant"]
+            },
+            "Permis de conduire": {
+                url: "https://permisdeconduire.ants.gouv.fr",
+                category: "État Civil & Identité",
+                keywords: ["permis", "conduire", "auto-école", "examen", "voiture"]
+            }
+        };
+
+        function searchSites() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const resultsContainer = document.getElementById('searchResults');
+            const resultsContent = document.getElementById('resultsContent');
+            const categoriesGrid = document.getElementById('categoriesGrid');
+
+            if (searchTerm.length < 2) {
+                resultsContainer.style.display = 'none';
+                categoriesGrid.style.display = 'grid';
+                return;
+            }
+
+            const matchingSites = [];
+
+            // Recherche dans la base de données
+            for (const [siteName, siteData] of Object.entries(sitesDatabase)) {
+                const nameMatch = siteName.toLowerCase().includes(searchTerm);
+                const keywordMatch = siteData.keywords.some(keyword =>
+                    keyword.toLowerCase().includes(searchTerm) ||
+                    searchTerm.includes(keyword.toLowerCase())
+                );
+
+                if (nameMatch || keywordMatch) {
+                    matchingSites.push({
+                        name: siteName,
+                        ...siteData
+                    });
+                }
+            }
+
+            // Affichage des résultats
+            if (matchingSites.length > 0) {
+                resultsContent.innerHTML = matchingSites.map(site =>
+                    `<div style="margin-bottom: 15px; padding: 15px; border-left: 4px solid #667eea; background: #f8f9ff; border-radius: 8px;">
+                        <a href="${site.url}" target="_blank" style="text-decoration: none; color: #667eea; font-weight: bold; font-size: 1.1em;">${site.name}</a>
+                        <div style="color: #666; font-size: 0.9em; margin-top: 5px;">Catégorie: ${site.category}</div>
+                    </div>`
+                ).join('');
+            } else {
+                resultsContent.innerHTML = '<div class="no-results">Aucun résultat trouvé pour votre recherche.</div>';
+            }
+
+            resultsContainer.style.display = 'block';
+            categoriesGrid.style.display = 'none';
+        }
+
+        // Recherche en temps réel
+        document.getElementById('searchInput').addEventListener('input', function (e) {
+            if (e.target.value === '') {
+                document.getElementById('searchResults').style.display = 'none';
+                document.getElementById('categoriesGrid').style.display = 'grid';
+            }
+        });
+
+        // Recherche avec Enter
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchSites();
+            }
+        });
+
+        // Animation au chargement
+        window.addEventListener('load', function () {
+            const cards = document.querySelectorAll('.category-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.6s ease';
+
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+
+</html>
